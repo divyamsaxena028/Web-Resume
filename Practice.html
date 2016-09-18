@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background: url("Imagination.jpg") no-repeat center fixed;
+  background-size: cover;
+  margin: 0;
+}
+div.container{
+ width: 100%;
+}
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  margin: 4px;
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.icon-border {
+  position: relative;
+}
+
+.icon-border::before,
+.icon-border::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.icon-border::before {
+  z-index: 1;
+  -webkit-transition: box-shadow 0.3s;
+          transition: box-shadow 0.3s;
+}
+
+.icon-border::after {
+  z-index: 2;
+  background: url("../img/icons4.png");
+  background-image: url("../img/icons4.svg"), none;
+}
+
+/* facebook */
+.icon-border.facebook::before {
+  box-shadow: inset 0 0 0 48px #3b5998;
+}
+
+.icon-border.facebook:hover::before {
+  box-shadow: inset 0 0 0 4px #3b5998;
+}
+
+.icon-border.facebook::after {
+  background-position: 0 0;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<a href="#">
+<img class="icon icon-TYPE facebook" src="Facebooklogo.png" width="25px" height="25px">
+</img>
+</a>
+<a href="#" class="icon icon-TYPE twitter">twitter</a>
+<a href="#" class="icon icon-TYPE googleplus">google+</a>
+<a href="#" class="icon icon-TYPE github">github</a>
+<a href="#" class="icon icon-TYPE rss">rss</a>
+</div>
+</body>
+</html>
+
